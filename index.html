@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Aurelia</title>
+  </head>
+
+  <body aurelia-app="main">
+    <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyD5-vOBr8NPf2itjJ5JY5kyDz2DQtJn2u0",
+        authDomain: "aurelia-auth-app.firebaseapp.com",
+        databaseURL: "https://aurelia-auth-app.firebaseio.com",
+        storageBucket: "aurelia-auth-app.appspot.com",
+        messagingSenderId: "129036411834"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="scripts/vendor-bundle.js" data-main="aurelia-bootstrapper"></script>
+  </body>
+</html>
