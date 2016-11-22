@@ -12,7 +12,6 @@ define('app',["require", "exports"], function (require, exports) {
             firebase.auth().onAuthStateChanged(function (user) {
                 _this.userLoggedIn = user ? true : false;
                 _this.user = user;
-                console.log(user);
             });
         }
         App.prototype.login = function () {
@@ -22,7 +21,6 @@ define('app',["require", "exports"], function (require, exports) {
                 _this.authToken = result.credential.accessToken;
                 _this.user = result.user;
                 _this.userLoggedIn = true;
-                console.log(result);
             }).catch(function (error) {
                 var errorCode = error.code;
                 var errorMessage = error.message;

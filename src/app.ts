@@ -9,7 +9,6 @@ export class App {
         firebase.auth().onAuthStateChanged(user => {
             this.userLoggedIn = user ? true : false;
             this.user = user;
-            console.log(user);
         });
     }
 
@@ -20,7 +19,6 @@ export class App {
             this.authToken = result.credential.accessToken;
             this.user = result.user;
             this.userLoggedIn = true;
-            console.log(result);
         }).catch(error => {
             let errorCode = error.code;
             let errorMessage = error.message;
